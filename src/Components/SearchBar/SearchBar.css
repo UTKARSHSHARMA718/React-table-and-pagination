@@ -1,0 +1,17 @@
+
+.filter-btn{
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 0 10px;
+    /* background-color: brown; */
+    height: 30px;
+}
+.searchbar-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+    margin-bottom:20px ;
+    width: 600px;
+}

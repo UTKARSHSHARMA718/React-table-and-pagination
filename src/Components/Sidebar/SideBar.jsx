@@ -6,7 +6,8 @@ import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import LockIcon from "@mui/icons-material/Lock";
 import "./SideBar.css";
-const SiaBar = () => {
+
+const SideBar = () => {
   const [selectBtn, setSelectBtn] = useState();
   const onHandleClick = (index) => {
     setSelectBtn(index);
@@ -61,4 +62,4 @@ const SiaBar = () => {
   );
 };
 
-export default SiaBar;
+export default SideBar;

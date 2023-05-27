@@ -5,47 +5,30 @@ import {
   TextField,
   Button,
 } from "@mui/material";
-import { makeStyles } from '@mui/styles';
 import { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
+import './SearchBar.css'
+import { flushSync } from 'react-dom';
 
-const useStyles = makeStyles((theme) => ({
-  searchInput: {
-    // marginRight: theme.spacing(1),
-  },
-  button: {
-    // margin: theme.spacing(1),
-  },
-}));
-const SearchBar = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const handleChange = () => {};
-  const classes = useStyles();
+
+const SearchBar = ({ onHandleUserSearch, search }) => {
+  // const [searchTerm, setSearchTerm] = useState("");
+  // const handleChange = () => {};
+
+  // const onHandleChange = (event) => {
+  //     setSearch(event.target.value)
+  //     // onHandleUserSearch();
+  // }
+
   return (
     <>
-      <Container maxWidth="md" sx={{ mt: 20 }}>
-        {/* <TextField
-          id="search"
-          type="search"
-          label="Type to Search"
-          value={searchTerm}
-          onChange={handleChange}
-          sx={{ width: 600 }}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="start">
-                <SearchIcon />
-              </InputAdornment>
-            ),
-          }}
-        /> */}
-
+      <div className="searchbar-container">
         <TextField
-          className={classes.searchInput}
           variant="outlined"
           placeholder="Type to Search"
-          sx={{ width: 400,height:200 }}
+          sx={{ width: 400 }}
+          inputProps={{ style: { height: '5px' } }}
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
@@ -53,12 +36,16 @@ const SearchBar = () => {
               </InputAdornment>
             ),
           }}
+          value={search}
+          onChange={(event)=>onHandleUserSearch(event)} 
         />
-        <FilterAltIcon />
-        <Button variant="contained" color="primary" className={classes.button}>
-          Click Me
+        <div>
+          <FilterAltIcon className="filter-btn" />
+        </div>
+        <Button variant="contained" color="primary" >
+          Create User
         </Button>
-      </Container>
+      </div>
     </>
   );
 };

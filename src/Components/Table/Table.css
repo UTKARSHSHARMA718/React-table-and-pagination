@@ -1,0 +1,91 @@
+.demo {
+  border: 1px solid #C0C0C0;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+.demo th {
+  border: 1px solid #C0C0C0;
+  padding: 5px;
+}
+
+.demo td {
+  border: 1px solid #C0C0C0;
+  padding: 5px;
+}
+
+.disable-row {
+  color: rgb(194, 191, 191) !important;
+}
+
+.enable-row {
+  color: black !important;
+}
+
+.user {
+  width: 300px;
+  background-color: #61dafb;
+  border-radius: 10px;
+  min-height: 200px;
+}
+
+.paginationBttns {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.paginationBttns a {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid black;
+  color: blue;
+  cursor: pointer;
+
+}
+
+td,
+tr,
+th {
+  width: 180px;
+  word-break: break-all;
+}
+
+.paginationBttns a:hover {
+  color: white;
+  background-color: blue;
+}
+
+.paginationActive a {
+  color: white;
+  background-color: blue;
+}
+
+.disable-btn {
+  pointer-events: none;
+  color: rgb(221, 217, 217) !important;
+  background-color: #e2f6fc;
+}
+
+.hidden-btn {
+  display: none;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.table-container {
+  text-align: center;
+}
+
+.no-data-text {
+  width: 100%;
+  text-align: center;
+}
