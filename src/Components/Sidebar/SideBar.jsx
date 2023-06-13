@@ -25,23 +25,28 @@ const SideBar = () => {
           <div className="menu-options">
             <DnsIcon
               className={`menu-btns ${selectBtn === 1 ? "bg-blue" : ""}`}
+              sx={{width:35,height:35}}
               onClick={() => onHandleClick(1)}
             />
             <VolunteerActivismIcon
+            sx={{width:35,height:35}}
               className={`menu-btns ${selectBtn === 2 ? "bg-blue" : ""}`}
               onClick={() => onHandleClick(2)}
             />
             <ManageAccountsIcon
+            sx={{width:35,height:35}}
               className={`menu-btns ${selectBtn === 3 ? "bg-blue" : ""}`}
               onClick={() => onHandleClick(3)}
             />
             <LockIcon
+            sx={{width:35,height:35}}
               className={`menu-btns ${selectBtn === 4 ? "bg-blue" : ""}`}
               onClick={() => onHandleClick(4)}
             />
           </div>
           <div className="user-settings">
             <NotificationsIcon
+            sx={{width:35,height:35}}
               className={`menu-btns ${selectBtn === 5 ? "bg-blue" : ""}`}
               onClick={() => onHandleClick(5)}
             />
@@ -52,6 +57,7 @@ const SideBar = () => {
               />
             </div>
             <LogoutIcon
+            sx={{width:35,height:35}}
               className={`menu-btns ${selectBtn === 6 ? "bg-blue" : ""}`}
               onClick={() => onHandleClick(6)}
             />

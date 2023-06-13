@@ -1,27 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Navbar.css";
-const NavBar = () => {
-  const [selectedTag, setSelectedTag] = useState(2);
+const NavBar = ({ currentTagToShow, setCurrentTagToShow }) => {
   const onHandleSelect = (tagIndex) => {
-    setSelectedTag(tagIndex);
+    setCurrentTagToShow(tagIndex);
   };
   return (
     <>
       <div>
-        <nav>
-          <div className="container">
+        <nav className="box">
+          <div className="nav-container">
             <div className="heading">
               <h1>Access Control</h1>
             </div>
             <div className="tags">
               <button
-                className={`tags-btn ${selectedTag === 1 ? "border-bottom" : ""}`}
+                className={`tags-btn ${
+                  currentTagToShow === 1 ? "border-bottom" : ""
+                }`}
                 onClick={() => onHandleSelect(1)}
               >
                 Roles
               </button>
               <button
-                className={`tags-btn ${selectedTag === 2 ? "border-bottom" : ""}`}
+                className={`tags-btn ${
+                  currentTagToShow === 2 ? "border-bottom" : ""
+                }`}
                 onClick={() => onHandleSelect(2)}
               >
                 Users

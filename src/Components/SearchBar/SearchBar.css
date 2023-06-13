@@ -9,9 +9,22 @@
 .searchbar-container{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     /* background-color: aqua; */
-    margin-bottom:20px ;
+    margin-bottom:20px;
     width: 600px;
+    padding: 0 20px;
+}
+#create-user-btn{
+    padding: 10px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: #00aeef;
+    color: white;
+    font-weight: bold;
+    height: 100%;
+}
+#create-user-btn:hover{
+    background-color: #0092c7;
 }

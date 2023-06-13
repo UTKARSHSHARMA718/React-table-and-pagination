@@ -1,17 +1,19 @@
-.demo {
-  border: 1px solid #C0C0C0;
+.UserDatatable {
+  border: 1px solid #c0c0c0;
   border-collapse: collapse;
   padding: 5px;
+  width: 98%;
+  /* margin: 0 20px; */
 }
 
-.demo th {
-  border: 1px solid #C0C0C0;
+.UserDatatable th {
+  border: 1px solid #c0c0c0;
   padding: 5px;
 }
 
-.demo td {
-  border: 1px solid #C0C0C0;
-  padding: 5px;
+.UserDatatable td {
+  border: 1px solid #c0c0c0;
+  padding: 10px 5px;
 }
 
 .disable-row {
@@ -45,13 +47,12 @@
   border: 1px solid black;
   color: blue;
   cursor: pointer;
-
 }
 
 td,
 tr,
 th {
-  width: 180px;
+  /* width: 180px; */
   word-break: break-all;
 }
 
@@ -71,6 +72,7 @@ th {
   background-color: #e2f6fc;
 }
 
+
 .hidden-btn {
   display: none;
 }
@@ -79,13 +81,66 @@ th {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-}
-
-.table-container {
   text-align: center;
+  width: 98%;
+  margin: 0 auto;
+}
+table{
+  border-radius: 10px;
 }
 
 .no-data-text {
   width: 100%;
   text-align: center;
+}
+
+.firstName,
+.LastName,
+.email {
+  text-align: start;
+}
+.container{
+  width: 100%;
+}
+
+#locked-users{
+  color: #bcc4c6;
+  padding: 5px;
+}
+@media (max-width:800px){
+  .UserDatatable td{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 728px) {
+  table {
+    border: 3px solid rgb(15, 255, 127);
+  }
+  .UserDatatable td{
+    font-size: 14px;
+  }
+  table thead tr {
+    display: none;
+  }
+  table tr {
+    display: block;
+  }
+  table th,
+  table td {
+    padding: 0.5rem;
+  }
+  table td{
+    text-align: right !important;
+    align-items: center;
+    display: block;
+    font-size: 1rem;
+  }
+  table td::before{
+    content: attr(data-title) ": ";
+    float: left;
+  }
+  tbody tr:nth-child(even){
+    background-color:#c3ebf6;
+    color: black;
+  }
 }
